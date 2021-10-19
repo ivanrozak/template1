@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+// Variable
+
+$base-color: #2e2e2e;
+$secondary-color: white;
+$base-font: 'Poppins';
+$header-font: 'Oleo Script';
+
+body {
+  font-family: 'Poppins';
+  color: $secondary-color;
+  letter-spacing: 0.3px;
+}
+section {
+  padding-top: 45px;
+}
+strong {
+  font-weight: 600;
+}
+
+.btn-base {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: 0.5s;
+  margin: 5px;
+  background-color: $secondary-color;
+  color: $base-color;
+}
+/*-------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: $base-color;
+  p {
+    font-family: $base-font;
+  }
+  // background: #37517e;
+  // background-image: linear-gradient(#87231a 20%, #d8c1ab);
+}
+#hero {
+  .slide {
+    max-width: 250px;
+    height: 270px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+#hero .container {
+  padding-top: 0px;
+  text-align: center !important;
+}
+#hero h1 {
+  font-family: $header-font !important;
+  margin: 0 0 5px 0;
+  font-size: 34px !important;
+  font-weight: 400 !important;
+  line-height: 56px;
+  color: #fff;
+}
+#hero h2 {
+  // color: rgba(255, 255, 255, 0.6);
+  font-family: $base-font;
+  // margin-bottom: 50px;
+  margin-bottom: 5px !important;
+  font-size: 24px;
+  color: $secondary-color;
+}
+#hero .btn-get-started {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #87231a;
+  background: #d8c1ab;
+  position: absolute;
+  z-index: 100;
+}
+#hero .btn-get-started:hover {
+  background: #363636;
+  color: white;
+}
+.btn-get-started {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #47b2e4;
+}
+.btn-get-started:hover {
+  background: #209dd8;
+}
+#hero .btn-watch-video {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  margin: 10px 0 0 25px;
+  color: #fff;
+  line-height: 1;
+}
+#hero .btn-watch-video i {
+  line-height: 0;
+  color: #fff;
+  font-size: 32px;
+  transition: 0.3s;
+  margin-right: 8px;
+}
+#hero .btn-watch-video:hover i {
+  color: #47b2e4;
+}
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.logo-bordered {
+  width: 40px;
+  border: 1.5px solid white;
+  border-radius: 30px;
+  padding: 15px 8px;
+}
+
+// .absolute-bottom {
+//   position: absolute;
+//   bottom: 0;
+//   padding: 0 0 30px 0 !important;
+//   z-index: 20;
+//   width: 100%;
+//   img {
+//     // object-fit: cover;
+//     width: 100%;
+//     transform: rotate(180deg);
+//     // max-width: min-content;
+//   }
+// }
+
+@media (max-width: 991px) {
+  #hero {
+    height: 100vh;
+    text-align: center;
+  }
+  #hero .animated {
+    -webkit-animation: none;
+    animation: none;
+  }
+  #hero .hero-img {
+    text-align: center;
+  }
+  #hero .hero-img img {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 70%;
+  }
+  // .absolute-bottom {
+  //   max-height: 50px;
+  // }
+}
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+  }
+  #hero .btn-get-started {
+    font-size: 16px;
+    padding: 10px 24px 11px 24px;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

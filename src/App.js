@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import moment from 'moment';
+// Internal dependencies
+import './App.scss';
+
+// Component Import
+const HomePage = React.lazy(() => import('./views/Index'));
 
 function App() {
+  const idLocale = require('moment/locale/id');
+  moment.locale('id', idLocale);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route
+            exact
+            path='/'
+            name='Home Page'
+            render={(props) => <HomePage {...props} />}
+          />
+          <Redirect to='/' />
+        </Switch>
+      </React.Suspense>
+    </BrowserRouter>
   );
 }
 
