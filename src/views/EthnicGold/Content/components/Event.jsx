@@ -3,6 +3,7 @@ import moment from 'moment';
 import Countdown from './child/Countdown';
 import Galleries from './child/Galleries';
 import Music from './child/Music';
+import Comments from './child/Comments';
 
 function Event(props) {
   const { data, dataChat } = props;
@@ -105,6 +106,7 @@ function Event(props) {
         <div>
           <Galleries />
         </div>
+        <Comments dataChat={dataChat} />
       </section>
     </>
   );

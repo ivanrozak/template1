@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import LightGallery from 'lightgallery/react';
 import './galleries.scss';
 
@@ -14,18 +14,10 @@ import lgFullscreen from 'lightgallery/plugins/fullscreen';
 import lgPager from 'lightgallery/plugins/pager';
 
 function Galleries() {
-  const onInit = () => {
-    console.log('lightGallery has been initialized');
-  };
-  const [load, setLoad] = useState(false);
-  const handleClick = () => {
-    setLoad(!load);
-  };
-  const mobile = { controls: true, showCloseIcon: true, download: true };
+  const mobile = { controls: false, showCloseIcon: true, download: true };
   return (
     <>
       <LightGallery
-        onInit={onInit}
         speed={500}
         plugins={[lgZoom, lgPager, lgFullscreen]}
         // elementClassNames='custom-wrapper-class'
@@ -33,10 +25,6 @@ function Galleries() {
         // className='m-5'
         mobileSettings={mobile}
       >
-        {' '}
-        {load ? (
-          <div style={{ position: 'fixed', top: 0, zIndex: 9000 }}>x</div>
-        ) : null}
         <a className='img-a' href='assets/img/themes/elegant-white/1.jpg'>
           <img
             className='img-grid'

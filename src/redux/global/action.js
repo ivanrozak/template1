@@ -12,6 +12,7 @@ export const dataChat = (params) => ({
 });
 
 export const getChat = (data) => async (dispatch) => {
+  dispatch(dataChat({ params: { name: 'isLoadingChat', val: true } }));
   await axios.get(`${Url}/chat/${data}`).then((res) => {
     const dataBaru = res.data.data;
     console.log(dataBaru, 'from chat');
@@ -20,6 +21,7 @@ export const getChat = (data) => async (dispatch) => {
   });
 };
 export const getUserData = (data) => async (dispatch) => {
+  dispatch(dataClient({ params: { name: 'isLoadingClient', val: true } }));
   await axios.get(`${Url}/user/${data}`).then((res) => {
     const dataBaru = res.data.data;
     console.log(dataBaru, 'from user');
