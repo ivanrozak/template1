@@ -9,12 +9,15 @@ function Index() {
   const handleOpen = (data) => {
     setIsOpen(data);
   };
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getChat(1));
-    dispatch(getUserData(1));
-  }, []);
+    function getApi() {
+      dispatch(getChat(1));
+      dispatch(getUserData(1));
+    }
+    return getApi();
+  }, [dispatch]);
   return (
     <>
       {isOpen === false ? <Opener parentCallback={handleOpen} /> : <Content />}
