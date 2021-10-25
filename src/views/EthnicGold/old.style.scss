@@ -1,4 +1,124 @@
-/* import Font */
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: $base-color;
+  p {
+    font-family: $base-font;
+  }
+  // background: #37517e;
+  // background-image: linear-gradient(#87231a 20%, #d8c1ab);
+}
+#hero {
+  .slide {
+    max-width: 250px;
+    height: 270px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+#hero .container {
+  padding-top: 0px;
+  text-align: center !important;
+}
+#hero h1 {
+  font-family: $header-font !important;
+  margin: 0 0 5px 0;
+  font-size: 34px !important;
+  font-weight: 400 !important;
+  line-height: 56px;
+  color: #fff;
+}
+#hero h2 {
+  // color: rgba(255, 255, 255, 0.6);
+  font-family: $base-font;
+  // margin-bottom: 50px;
+  margin-bottom: 5px !important;
+  font-size: 24px;
+  color: $secondary-color;
+}
+#hero .btn-get-started {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #87231a;
+  background: #d8c1ab;
+  position: absolute;
+  z-index: 100;
+}
+#hero .btn-get-started:hover {
+  background: #363636;
+  color: white;
+}
+.btn-get-started {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #47b2e4;
+}
+.btn-get-started:hover {
+  background: #209dd8;
+}
+#hero .btn-watch-video {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  margin: 10px 0 0 25px;
+  color: #fff;
+  line-height: 1;
+}
+#hero .btn-watch-video i {
+  line-height: 0;
+  color: #fff;
+  font-size: 32px;
+  transition: 0.3s;
+  margin-right: 8px;
+}
+#hero .btn-watch-video:hover i {
+  color: #47b2e4;
+}
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.logo-bordered {
+  width: 40px;
+  border: 1.5px solid $base-color;
+  border-radius: 30px;
+  padding: 15px 8px;
+}
+
+@media (max-width: 991px) {
+  #hero {
+    height: 100vh;
+    text-align: center;
+  }
+  #hero .animated {
+    -webkit-animation: none;
+    animation: none;
+  }
+  #hero .hero-img {
+    text-align: center;
+  }
+  #hero .hero-img img {
+    width: 50%;
+  }
+} /* import Font */
 
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
@@ -297,4 +417,49 @@ article {
 
 .lg-toolbar .lg-close:after {
   content: '\e070';
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 70%;
+  }
+  // .absolute-bottom {
+  //   max-height: 50px;
+  // }
+}
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+  }
+  #hero .btn-get-started {
+    font-size: 16px;
+    padding: 10px 24px 11px 24px;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }

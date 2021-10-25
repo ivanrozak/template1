@@ -1,41 +1,35 @@
 import React from 'react';
-import './index.scss';
+import '../../global.scss';
+import moment from 'moment';
 
 function Index(props) {
+  const { dataUser } = props;
   const onOpen = () => {
     props.parentCallback(true);
   };
   return (
     <>
-      <section id='hero' className='d-flex'>
-        <div className='container'>
-          <div className='row justify-content-center align-items-center'>
-            <div className='col-lg-4' data-aos='fade-up' data-aos-delay='200'>
-              <div className='d-flex justify-content-center mb-2'>
-                <div className='logo-bordered'>
-                  <img src='assets/img/logo_only.svg' alt='' />
-                </div>
-              </div>
-              <h2>Arief Muhammad</h2>
-              <p>You're invited to</p>
-              <div className='d-flex justify-content-center'>
-                <div className='slide'>
-                  <img
-                    src='assets/img/themes/elegant-white/onel-_-ervi-t-04901-rkk0YvpK_.jpg'
-                    alt=''
-                  />
-                </div>
-              </div>
-              <p className='mt-3 mb-1'>The Wedding Of</p>
-              <h1 className='mb-1'>Marsha & Yuan</h1>
-              <p>
-                <strong>02 JANUARI 2022</strong>{' '}
-              </p>
-              <div onClick={onOpen} className='btn-base'>
-                Buka undangan
-              </div>
-            </div>
-          </div>
+      <section
+        id='opener'
+        className='d-flex flex-column justify-content-between py-5'
+      >
+        <div className='text-center'>
+          <h5>Dear, Arief Muhammad</h5>
+          <p>You're invited to</p>
+        </div>
+        <div className='text-center'>
+          <p className='bold'>THE WEDDING OF</p>
+          <h1>
+            {dataUser.inisial_wanita} & {dataUser.inisial_pria}
+          </h1>
+          <p>
+            <strong>
+              {moment(dataUser.tanggal_resepsi).format('dddd, Do MMMM  YYYY')}
+            </strong>{' '}
+          </p>
+          <button onClick={onOpen} className='btn btn-base mt-3'>
+            Open Invitation
+          </button>
         </div>
       </section>
     </>

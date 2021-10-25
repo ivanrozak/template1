@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from 'react-slick';
-import moment from 'moment';
 
 function Hero(props) {
   const { data } = props;
@@ -18,10 +17,9 @@ function Hero(props) {
 
   return (
     <>
-      <div id='main' className='text-center'>
-        <div className='hero'>
-          <div className='bg-img' data-aos='fade' data-aos-delay='150'>
-            <div className='layer'></div>
+      <section id='main' className='text-center'>
+        <div className='row justify-content-center p-0'>
+          <div className='slide-img' data-aos='fade' data-aos-delay='150'>
             <Slider {...settings}>
               <div>
                 <img src='assets/img/themes/elegant-white/1.jpg' alt='' />
@@ -37,26 +35,21 @@ function Hero(props) {
               </div>
             </Slider>
           </div>
-          <div className='d-flex justify-content-center'>
-            <div className='title' data-aos='fade-up' data-aos-delay='200'>
-              <div className='d-flex justify-content-center mb-4'>
-                <div className='logo-bordered'>
-                  <img src='assets/img/logo_only.svg' alt='' />
-                </div>
-              </div>
-              <div className=''>
-                <div>The Wedding Of</div>
-                <div className='f32 oleo' style={{ marginTop: '-8px' }}>
-                  {data.inisial_wanita} & {data.inisial_pria}
-                </div>
-                <div className='semibold' style={{ marginTop: '-6px' }}>
-                  {moment(data.tanggal_resepsi).format('dddd, Do MMMM  YYYY')}
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <p className='bold mt-3'>THE WEDDING</p>
+        <h1 className='mn-4'>
+          {data.inisial_wanita} & {data.inisial_pria}
+        </h1>
+        <div className='lines mb-4 mn-4'>_____</div>
+        <p className='mt-2 px-2'>
+          “Dan diantara tanda-tanda kebesaran-Nya ialah Dia menciptakan
+          pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
+          dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+          kasih dan sayang. “<br />
+          <br />
+          (Ar-Rum: 21)
+        </p>
+      </section>
     </>
   );
 }

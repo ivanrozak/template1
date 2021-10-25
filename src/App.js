@@ -12,7 +12,16 @@ function App() {
   moment.locale('id', idLocale);
   return (
     <BrowserRouter>
-      <React.Suspense fallback={<div>Loading...</div>}>
+      <React.Suspense
+        fallback={
+          <div
+            style={{ height: '100vh', width: '100%' }}
+            className='d-flex justify-content-center align-items-center'
+          >
+            Loading...
+          </div>
+        }
+      >
         <Switch>
           <Route
             exact
