@@ -20,9 +20,7 @@ function Galleries() {
       <LightGallery
         speed={500}
         plugins={[lgZoom, lgPager, lgFullscreen]}
-        // elementClassNames='custom-wrapper-class'
         mode='lg-fade'
-        // className='m-5'
         mobileSettings={mobile}
       >
         <a className='img-a' href='assets/img/themes/elegant-white/1.jpg'>

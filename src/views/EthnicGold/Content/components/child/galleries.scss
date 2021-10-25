@@ -1,29 +1,14 @@
-/* @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
-@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
-@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css'); */
-/* .gallery-item {
-  margin: 5px;
-} */
-/* .gallery-item { */
-/* width: 200px; */
-/* padding: 5px; */
-/* /* } */
-
-.lg-react-element {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  /* overflow: hidden; */
-  overflow-y: auto;
-  width: 100%;
-  /* height: 360px; */
-}
 .img-grid {
   padding: 1px;
   width: 120px;
   height: 120px;
   object-fit: cover;
+}
+@media (max-width: 375px) {
+  .img-grid {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 .pswp-thumbnail {

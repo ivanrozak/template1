@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stalemate&display=swap');
 
 // Variable
 
@@ -9,7 +9,7 @@ $base-color: #2e2e2e;
 $secondary-color: white;
 $base-font: 'Poppins';
 $header-font: 'Cookie';
-$art-font: 'Sacramento';
+$art-font: 'Stalemate';
 
 body {
   font-family: 'Poppins';
@@ -97,8 +97,8 @@ strong {
   }
   h3 {
     font-family: $art-font;
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 40px;
+    // font-weight: bold;
   }
   background-repeat: repeat;
   #main {
@@ -131,6 +131,46 @@ strong {
       height: 150px;
       object-fit: cover;
       box-shadow: 4px 6px 20px rgba(175, 175, 175, 0.8);
+    }
+    background-image: url('./EthnicGold/assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    .ceremony {
+      .front-layer {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px 15px;
+        margin: 20px 0;
+        border-radius: 20px;
+      }
+      background-image: url('./EthnicGold/assets/8.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      box-shadow: 0px 6px 20px rgba(175, 175, 175, 0.8);
+    }
+    // Countdown
+    .Countdown-col {
+      display: inline-block;
+    }
+
+    .Countdown-col-element {
+      display: inline-block;
+      background-color: rgba(90, 90, 90, 0.8);
+      margin: 0 5px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      color: $secondary-color;
+    }
+
+    .Countdown-col-element {
+      strong {
+        font-size: 25px;
+      }
+      span {
+        font-size: 12px;
+      }
     }
   }
 }
