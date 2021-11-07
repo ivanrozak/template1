@@ -36,19 +36,21 @@ function Hero(props) {
             </Slider>
           </div>
         </div>
-        <p className='bold mt-3'>THE WEDDING</p>
-        <h1 className='mn-4'>
-          {data.inisial_wanita} & {data.inisial_pria}
-        </h1>
-        <div className='lines mb-4 mn-4'>_____</div>
-        <p className='mt-2 px-2'>
-          “Dan diantara tanda-tanda kebesaran-Nya ialah Dia menciptakan
-          pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
-          dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
-          kasih dan sayang. “<br />
-          <br />
-          (Ar-Rum: 21)
-        </p>
+        <div data-aos='fade-up' data-aos-delay='150'>
+          <p className='bold mt-3'>THE WEDDING</p>
+          <h1 className='mn-4'>
+            {data.inisial_wanita} & {data.inisial_pria}
+          </h1>
+          <div className='lines mb-4 mn-4'>-----</div>
+          <p className='mt-2 px-2'>
+            “Dan diantara tanda-tanda kebesaran-Nya ialah Dia menciptakan
+            pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
+            dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+            kasih dan sayang. “<br />
+            <br />
+            (Ar-Rum: 21)
+          </p>
+        </div>
       </section>
     </>
   );

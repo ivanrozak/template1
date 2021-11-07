@@ -3,7 +3,7 @@ import { GET_CLIENT_DATA, GET_CHAT_DATA } from './types';
 const initialState = {
   dataState: {
     isLoading: false,
-    isloadingChat: true,
+    isloadingChat: 0,
     isLoadingClient: true,
     resultData: {
       nama_pria: 'Yuan Faris Efendi',

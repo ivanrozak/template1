@@ -9,8 +9,12 @@ function Index(props) {
   return (
     <>
       <div id='content' className='text-center'>
-        <Hero data={dataUser} />
-        <Event data={dataUser} />
+        <div className='row p-0 m-0 justify-content-center'>
+          <div className='col-lg-6 p-0 m-0'>
+            <Hero data={dataUser} />
+            <Event data={dataUser} />
+          </div>
+        </div>
       </div>
     </>
   );

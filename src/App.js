@@ -29,6 +29,12 @@ function App() {
             name='Home Page'
             render={(props) => <HomePage {...props} />}
           />
+          <Route
+            exact
+            path='/to=:username?'
+            name='Home Page'
+            render={(props) => <HomePage {...props} />}
+          />
           <Redirect to='/' />
         </Switch>
       </React.Suspense>

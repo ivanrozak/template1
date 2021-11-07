@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Opener from './EthnicGold/Opener/Index';
 import Content from './EthnicGold/Content/Index';
 import { useDispatch, useSelector } from 'react-redux';
-import { getChat, getUserData } from '../redux/global/action';
+import { getUserData } from '../redux/global/action';
 
 function Index() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ function Index() {
   const dispatch = useDispatch();
   useEffect(() => {
     function getApi() {
-      dispatch(getChat(1));
+      // dispatch(getChat(1));
       dispatch(getUserData(1));
     }
     return getApi();

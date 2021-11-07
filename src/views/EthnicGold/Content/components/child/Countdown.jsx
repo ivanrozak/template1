@@ -80,7 +80,7 @@ class Countdown extends Component {
     const countDown = this.state;
 
     return (
-      <div className='Countdown'>
+      <div className='Countdown' data-aos='zoom-in' data-aos-delay='150'>
         <span className='Countdown-col'>
           <span className='Countdown-col-element'>
             <strong>{this.addLeadingZeros(countDown.days)}</strong>

@@ -1,16 +1,33 @@
-import React from 'react';
-import useSound from 'use-sound';
+import React, { useState, useEffect } from 'react';
+import { AiFillPauseCircle, AiFillPlayCircle } from 'react-icons/ai';
 
 function Music() {
-  const [play, { stop, pause }] = useSound('assets/sound/sample_music.mp3', {
-    volume: 0.5,
-  });
+  const [state, setstate] = useState(false);
+  function pauseMusic() {
+    document.getElementById('myAudio').pause();
+    setstate(!state);
+  }
+  function playMusic() {
+    document.getElementById('myAudio').play();
+    setstate(!state);
+  }
+  useEffect(() => {
+    document.getElementById('myAudio').volume = 0.3;
+  }, []);
   return (
     <div>
-      <h1>Music here</h1>
-      <button onClick={play}>Play</button>
-      <button onClick={() => stop()}>Stop</button>
-      <button onClick={() => pause()}>pause</button>
+      <audio id='myAudio' autoPlay>
+        <source src='assets/sound/sample_music.mp3' />
+      </audio>
+      {!state ? (
+        <button onClick={pauseMusic} className='btn btn-music'>
+          <AiFillPauseCircle size={30} color='grey' />
+        </button>
+      ) : (
+        <button onClick={playMusic} className='btn btn-music'>
+          <AiFillPlayCircle size={30} color='grey' />
+        </button>
+      )}
     </div>
   );
 }

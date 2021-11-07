@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router';
 import '../../global.scss';
 import moment from 'moment';
 
@@ -7,6 +8,7 @@ function Index(props) {
   const onOpen = () => {
     props.parentCallback(true);
   };
+  const { username } = useParams();
   return (
     <>
       <section
@@ -14,7 +16,7 @@ function Index(props) {
         className='d-flex flex-column justify-content-between py-5'
       >
         <div className='text-center'>
-          <h5>Dear, Arief Muhammad</h5>
+          <h5>Dear, {username ? username : 'Tamu undangan'}</h5>
           <p>You're invited to</p>
         </div>
         <div className='text-center'>
